@@ -58,7 +58,11 @@ class VirtualGarmentSynthesizer:
             # https://drive.google.com/file/d/13vXDE5bbA0LdfChxwl9-_hiMS3fgAwjE/view?usp=sharing
             id = "13vXDE5bbA0LdfChxwl9-_hiMS3fgAwjE"
             output = ckpt_k2qm
-            gdown.download(id=id, output=output, quiet=False)
+            #gdown.download(id=id, output=output, quiet=False)
+            gdown.download(
+                f"https://drive.google.com/uc?export=download&confirm=pbef&id=13vXDE5bbA0LdfChxwl9-_hiMS3fgAwjE",
+                output
+            )
         ckpt_qm2t = 'checkpoints/qmeasurement2target/latest_net_G.pth'
         if not os.path.exists(ckpt_qm2t):
             print("Model not found, downloading from google drive...")
@@ -68,7 +72,11 @@ class VirtualGarmentSynthesizer:
             # https://drive.google.com/file/d/13vIVbAvUEXUWP3F30dFStw_LerG9Wifo/view?usp=sharing
             id = "13vIVbAvUEXUWP3F30dFStw_LerG9Wifo"
             output = ckpt_qm2t
-            gdown.download(id=id, output=output, quiet=False)
+            #gdown.download(id=id, output=output, quiet=False)
+            gdown.download(
+                f"https://drive.google.com/uc?export=download&confirm=pbef&id=13vIVbAvUEXUWP3F30dFStw_LerG9Wifo",
+                output
+            )
 
 
 if __name__ == '__main__':
