@@ -1,6 +1,6 @@
 import argparse
 import os
-import pprint
+#import pprint
 import torch.backends.cudnn as cudnn
 import torch.optim
 import torch.utils.data
@@ -9,10 +9,10 @@ import torchvision.transforms as transforms
 import tools.init_paths
 from config import cfg
 from config import update_config
-from core.loss import JointsMSELoss
-from core.function import validate
-from core.inference import get_max_preds
-from utils.utils import create_logger
+#from core.loss import JointsMSELoss
+#from core.function import validate
+#from core.inference import get_max_preds
+#from utils.utils import create_logger
 
 #import dataset
 #from datasets.mannequin import MannequinDataset
@@ -74,7 +74,10 @@ class HeatmapGenerator():
             os.makedirs(path,exist_ok=True)
             id = "1voMopc-Cuq1Uls0ZAS-sDTCrHJ1M8zJJ"
             output = ckpt
-            gdown.download(id=id, output=output, quiet=False)
+            gdown.download(
+                f"https://drive.google.com/uc?export=download&confirm=pbef&id=1voMopc-Cuq1Uls0ZAS-sDTCrHJ1M8zJJ",
+                output
+            )
         args = parse_args()
         args.opts=[]
         update_config(cfg, args)
